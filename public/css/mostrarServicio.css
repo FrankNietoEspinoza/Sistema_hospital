@@ -1,0 +1,171 @@
+/* Estilo para el contenedor principal */
+.mostrar-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo para el título */
+h1 {
+    color: #333;
+    font-size: 2.0rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilo para el botón de crear servicio */
+.btn-success {
+    background-color: #7a7d83;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+.btn-success:hover {
+    background-color: #424a57;
+}
+
+.btn-primary {
+    background-color: #4d9c18;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+.btn-primary:hover {
+    background-color: #428317;
+}
+
+/* Estilo para la tabla de servicios */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Estilo para la imagen dentro de la tabla */
+.img-thumbnail {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Estilo para el formulario dentro de la tabla */
+.form-control {
+    width: 300px;
+    display: inline-block;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+}
+
+/* Estilo para el mensaje de alerta */
+.alert {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+/* Estilo para el modal de crear servicio */
+.modal-title {
+    color: #110e0e;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilo para centrar el modal de eliminación */
+.modal-content {
+    display: flex;
+    justify-content: none;
+    align-items: none;
+    height: 100%;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+.modal-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#confirmarEliminacionModal .btn-secondary, #confirmarEliminacionModal .btn-danger {
+    margin: 0 10px;
+}
+
+/* Estilo para la celda de acción */
+.action-cell {
+    padding: 10px;
+    background-color: #f9f9f9; /* Fondo ligero para resaltar la celda */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Estilo para el botón de actualización */
+.update-btn {
+    margin-bottom: 10px; /* Espacio entre los botones */
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 8px 13px;
+    font-size: 0.875rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.update-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Estilo para el formulario de eliminación */
+.delete-form {
+    display: inline-block;
+    margin-top: 5px; /* Espacio superior para el formulario */
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    padding: 8px 13px;
+    font-size: 0.875rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}

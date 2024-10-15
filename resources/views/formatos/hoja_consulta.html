@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOJA DE CONSULTA EXTERNA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        td, th {
+            padding: 8px;
+            text-align: left;
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .dotted-line {
+            border-top: 2px dotted #000;
+            margin: 20px 0;
+        }
+        .solid-line {
+            border-top: 2px solid #000;
+            margin: 20px 0;
+        }
+        .custom-table td {
+            border: none;
+            padding: 5px;
+        }
+        .input-line {
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            width: 150px;
+        }
+        .checkbox-table {
+            width: 100%;
+        }
+        .checkbox-table td {
+            padding: 2px 5px; /* Ajusta el padding de las celdas de esta tabla */
+            font-size: 15px; /* Reduce aún más el tamaño de fuente para esta tabla */
+        }
+        .checkbox-table-clinico td {
+            padding: 2px 5px;
+            font-size: 14px;
+            text-align: left;
+            white-space: nowrap; /* Para evitar que el contenido se desborde */
+        }
+        /* Ajustes para impresión */
+        @media print {
+                body {
+                    margin: 0;
+                    padding: 0;
+                    width: 210mm; /* A4 width */
+                    height: 297mm; /* A4 height */
+                    font-size: 10pt;
+                }
+                @page {
+                    size: A4;
+                    margin: 10mm;
+                }
+                table, p, h2, div {
+                    page-break-inside: avoid; /* Evita que los elementos se dividan entre páginas */
+                }
+            }
+    </style>
+</head>
+<body>
+    <h2>HOJA DE CONSULTA EXTERNA</h2>
+    <p><strong>Apellidos y Nombres: </strong> <span id="nombre-paciente">[Nombre del Paciente]</span></p>
+    <p>
+        <strong>Sexo: </strong> <span id="sexo-paciente" style="margin-right: 80px;">[Sexo]</span> 
+        <strong>Fecha de Nacimiento: </strong> <span id="fecha-nacimiento" style="margin-right: 60px;">[Fecha de Nacimiento]</span>
+    </p>
+    <p><strong>Procedencia: </strong> <span id="procedencia">[Procedencia]</span></p>
+    <p>
+        <strong>Nombre del padre: </strong> <span id="nombre-padre">[Nombre del Padre]</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <strong>Nombre de la Madre: </strong> <span id="nombre-madre">[Nombre de la Madre]</span>
+    </p>
+    <p>
+        <strong>Domicilio Actual: </strong> <span id="domicilio-actual">[Domicilio Actual]</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <strong>Dni: </strong> <span id="dni">[Dni]</span>
+    </p>
+    <p>
+        <strong>Estado Civil: </strong> <span id="estado-civil">[Estado Civil]</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <strong>Religión: </strong><span id="religion">[Religión]</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <strong>Grado de Instrucción: </strong> <span id="grado-instruccion">[Grado de Instrucción]</span>
+    </p>
+
+    <!-- Línea punteada al final -->
+    <div class="dotted-line"></div>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+.mostrar-cita-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(180, 178, 178, 0.1);
+    border-radius: 10px;
+    margin-top: 50px;
+    
+}
+
+.mostrar-cita-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40;
+    
+}
+
+/* Estilos de alertas */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* Estilos de tabla */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    padding: 15px;
+    border-bottom: 1px solid #999999;
+    text-align: left;
+}
+
+.table th {
+    background-color: #c7c5c5; /*barra del formulario*/
+    color: #333;
+    font-weight: bold;
+}
+
+.table td {
+    background-color: #fff;
+    color: #555;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos de botones */
+.btn {
+    padding: 8px 13px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Estilos de iconos */
+.icon {
+    margin-right: 5px;
+}
+
+.turno {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.turno[data-color="green"] {
+    background-color: green;
+}
+
+.turno[data-color="red"] {
+    background-color: red;
+}
+
+/* dsdsdsddddddddddddddddddddddddd*/
+
+
+.hora-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.hora-selector button {
+    background-color: rgb(6, 160, 6);
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.hora-selector button.seleccionado {
+    background-color: rgba(223, 220, 12, 0.979);
+    color: rgb(6, 7, 6); /* Cambia el color del texto si es necesario */
+}
+
+.hora-selector button.ocupado {
+    background-color: red;
+    cursor: not-allowed;
+}
+
+.hora-selector button:hover:not(.ocupado):not(.seleccionado) {
+    background-color: lightgreen;
+}
+
+.hora.ocupada {
+    background-color: red;
+    color: white;
+    cursor: not-allowed;
+}
+
+.hora.ocupada:hover {
+    cursor: not-allowed;
+}
+
+
+/* imagen de las horas  */
+/* mostrarCita.css */
+.hora {
+    background: url('../images/estetoscopio.svg') no-repeat center center;
+    background-size: contain;
+    border: none;
+    width: 65px; /* Ajusta el tamaño según sea necesario */
+    height: 50px; /* Ajusta el tamaño según sea necesario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem; /* Usar unidades flexibles */
+    cursor: pointer;
+    color: #ffffff; /* Asegurar buen contraste */
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out; /* Transiciones suaves */
+}
+
+.hora:hover {
+    transform: scale(1.1); /* Efecto hover */
+}
+
+.hora.ocupada {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.hora.seleccionado {
+    border: 2px solid rgb(59, 59, 59);
+    outline: none; /* Eliminar borde por defecto al seleccionar */
+    box-shadow: 0 0 10px rgba(216, 10, 10, 0.2); /* Añadir sombra para resaltar */
+}
+
+/* Estilos generales para el modal */
+.modal-content {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(216, 13, 13, 0.1);
+    overflow: hidden;
+}
+
+.modal-dialog {
+    max-width: 600px; /* Ajustar el ancho máximo del modal */
+    margin: 1.75rem auto;
+}
+
+.modal-header {
+    background-color: #9a9da0; /* Fondo de la cabecera */
+    color: #fff; /* Color del texto de la cabecera */
+    border-bottom: none;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-header .modal-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.modal-header .modal-title i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.modal-header .close {
+    color: #000000; /* el x del modal*/
+    font-size: 1.2rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.modal-header .close:hover {
+    opacity: 1;
+}
+
+.modal-body {
+    padding: 20px;
+    font-size: 1rem;
+    background-color: #f1f1f1; /* Fondo del cuerpo del modal */
+    color: #333; /* Color del texto */
+}
+
+.modal-body p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.modal-body p strong {
+    font-weight: 600;
+    color: #070707; /* Color del texto destacado */
+}
+
+.modal-body p span {
+    color: #424141;
+}
+
+/* Estilo específico para el modal Detalle de la Cita */
+#detalleCitaModal .modal-body p:last-child {
+    border-bottom: none;
+}
+
+/* Estilo de transición suave para el modal */
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.modal.fade.show .modal-dialog {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+/* Ajustes de responsive */
+@media (max-width: 767px) {
+    .modal-dialog {
+        max-width: 90%;
+    }
+}

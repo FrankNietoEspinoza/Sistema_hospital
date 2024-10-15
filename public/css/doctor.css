@@ -1,0 +1,87 @@
+/* Contenedor principal */
+.doctor-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+/* Título centrado */
+h1.text-center {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px; /* Reduce la separación inferior */
+}
+
+/* Estilo de la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px; /* Reduce el espacio debajo de la tabla */
+}
+
+/* Estilos para las celdas */
+.table th, .table td {
+    padding: 8px 12px; /* Reduce el padding dentro de las celdas */
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.table td {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Estilo para los botones */
+.btn {
+    padding: 6px 10px; /* Reduce el padding de los botones */
+    font-size: 0.9rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 1px; /* Reduce el margen entre botones */
+    cursor: pointer;
+}
+
+/* Iconos en los botones */
+.btn i {
+    margin-right: 3px; /* Reduce el espacio entre el ícono y el texto */
+}
+
+/* Estilo para la lista de horarios */
+ul li {
+    margin-bottom: 3px; /* Reduce el espacio entre los elementos de la lista */
+}
+
+/* Estilo para alertas de éxito */
+.alert-success {
+    padding: 8px; /* Reduce el padding dentro de la alerta */
+    margin-bottom: 15px; /* Reduce el margen inferior de la alerta */
+    font-size: 1rem;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.85rem; /* Ajuste del tamaño de fuente en móviles */
+    }
+
+    .btn {
+        font-size: 0.75rem;
+    }
+
+    h1.text-center {
+        font-size: 1.8rem;
+    }
+}
+
+

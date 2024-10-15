@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hoja de Emergencia</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 10px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            td, th {
+                padding: 8px;
+                text-align: left;
+            }
+            h2 {
+                text-align: center;
+            }
+            p {
+                margin: 5px 0;
+            }
+            .dotted-line {
+                border-top: 2px dotted #000;
+                margin: 20px 0;
+            }
+            .solid-line {
+                border-top: 2px solid #000;
+                margin: 20px 0;
+            }
+            .custom-table td {
+                border: none;
+                padding: 3px;
+            }
+            .input-line {
+                border-bottom: 1px solid #000;
+                display: inline-block;
+                width: 150px;
+            }
+            .checkbox-table {
+                width: 90%;
+            }
+            .checkbox-table td {
+                padding: 2px 5px;
+                font-size: 15px;
+            }
+            .checkbox-table-clinico td {
+                padding: 2px 5px;
+                font-size: 14px;
+                text-align: left;
+                white-space: nowrap;
+            }
+            
+            /* Ajustes para impresión */
+            @media print {
+                body {
+                    margin: 0;
+                    padding: 0;
+                    width: 210mm; /* A4 width */
+                    height: 297mm; /* A4 height */
+                    font-size: 10pt;
+                }
+                @page {
+                    size: A4;
+                    margin: 10mm;
+                }
+                table, p, h2, div {
+                    page-break-inside: avoid; /* Evita que los elementos se dividan entre páginas */
+                }
+            }
+        </style>
+    </head>
+<body>
+    <h2>HOJA DE EMERGENCIA</h2>
+    <p><strong>Apellidos y Nombres: </strong> <span id="nombre-paciente">[Nombre del Paciente]</span></p>
+    <p>
+        <strong>Sexo: </strong> <span id="sexo-paciente">[Sexo]</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <strong>Fecha de Nacimiento: </strong> <span id="fecha-nacimiento" style="margin-right: 80px;">[Fecha de Nacimiento]</span>
+    </p>
+    <p><strong>Procedencia: </strong> <span id="procedencia">[Procedencia]</span></p>
+    <p>
+        <strong>Nombre del padre: </strong> <span id="nombre-padre">[Nombre del Padre]</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <strong>Nombre de la Madre: </strong> <span id="nombre-madre">[Nombre de la Madre]</span>
+    </p>
+    <p>
+        <strong>Domicilio Actual: </strong> <span id="domicilio-actual">[Domicilio Actual]</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <strong>Dni: </strong> <span id="dni">[Dni]</span>
+    </p>
+    <p>
+        <strong>Estado Civil: </strong> <span id="estado-civil">[Estado Civil]</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <strong>Religión: </strong><span id="religion">[Religión]</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <strong>Grado de Instrucción: </strong> <span id="grado-instruccion">[Grado de Instrucción]</span>
+    </p>
+
+    <!-- Línea punteada al final -->
+    <div class="dotted-line"></div>
+
+    <!-- Sección personalizada después de la línea punteada -->
+    <table class="custom-table">
+        <tr>
+            <td><strong>SIS:</strong> <span class="input-line"></span></td>
+            <td><strong>Fecha:</strong> <span class="input-line" style="width: 80px;"></span></td>
+            <td><strong>Hora:</strong> <span class="input-line" style="width: 50px;"></span></td>
+            <td><strong>Edad:</strong> <span class="input-line" style="width: 50px;"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Acompañante:</strong> <span class="input-line"></span></td>
+            <td colspan="2"><strong>Parentesco:</strong> <span class="input-line"></span></td>
+        </tr>
+    </table>
+
+    <!-- Nueva tabla para las opciones -->
+    <table class="checkbox-table">
+        <tr>
+            <td><strong>Forma de Ingreso:</strong></td>
+            <td>Caminando ( )</td>
+            <td>Silla de Ruedas ( )</td>
+            <td>Camilla &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( )</td>
+            <td>Brazos &nbsp;&nbsp;&nbsp;( )</td>
+        </tr>
+        <tr>
+            <td><strong>Estado de Ingreso:</strong></td>
+            <td>Bueno &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( )</td>
+            <td>Regular &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( )</td>
+            <td>Malo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( )</td>
+            <td>Fallecido ( )</td>
+        </tr>
+        <tr>
+            <td><strong>Anamnesis:</strong></td>
+            <td>Directo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ( )</td>
+            <td>Indirecto &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( )</td>
+            <td>Emergencia ( )</td>
+            <td>Prioridad ( )</td>
+        </tr>
+    </table>
+    <!-- Línea punteada al final -->
+    <div class="solid-line"></div>
+    <table class="custom-table">
+        <tr>
+            <td><strong>Tiempo de Enfermedad:</strong> <span class="input-line" style="width: 590px;"></span></td>
+        </tr>
+        <tr>
+            <td><strong>Signos y síntomas principales:</strong> <span class="input-line" style="width: 540px;"></span></td>
+        </tr>
+    </table>
+    <!-- Línea punteada al final -->
+    <div class="solid-line"></div>
+    
+    <!-- Nueva sección para Antecedentes y Relato Suscinto -->
+    <p><strong>Antecedentes:</strong> (HTA) ( ) (DBM) ( ) (TBC) ( ) (IMA) ( ) _____________________________________________________________</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(HEP) ( ) (DVC) ( ) (RAM) ( ) (n(RAM)) ( ) ______________________________________________________________</p>
+    
+    <p><strong>Relato Suscinto:</strong>___________________________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    
+    <!-- Nueva línea sólida -->
+    <div class="solid-line"></div>
+
+    <!-- Nueva sección como la imagen proporcionada -->
+    <table class="checkbox-table-clinico">
+        <tr>
+            <td><strong>Examen Clínico:</strong></td>
+            <td>PA _____ mmHg</td>
+            <td>FC _____ xMin</td>
+            <td>FR _____ xMin</td>
+            <td>T° _____ °C</td>
+            <td>Peso: _____ Kg</td>
+            <td>SpO2 _____</td>
+        </tr>
+    </table>
+    <p><strong>SENSORIO:</strong> Despierto ( ) Letargico ( ) Excitado ( ) Soporoso ( ) Coma ( )</p>
+    <div class="long-input-line"></div>
+    <p>______________________________________________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    <p><strong>Dx de Ingreso:</strong>___________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    <div class="long-input-line"></div>
+    <div class="long-input-line"></div>
+    
+    <p><strong>EXAMEN DE LABORATORIO:</strong>____________________________________________________________________________</p>
+    <div class="long-input-line"></div>
+    <p><strong>RADIOGRAFÍA:</strong> ______________________________________ <strong>ECOGRAFÍA:</strong> _____________________________________</p>
+    <p><strong>TRATAMIENTO:</strong>__________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+    <!-- Nueva línea sólida -->
+    <div class="solid-line"></div>
+    <!-- Nueva sección para "DESTINO" y "OBSERVACIONES" -->
+    <table class="checkbox-table">
+        <tr>
+            <td><strong>DESTINO</strong></td>
+            <td>Observación ( )</td>
+            <td>Hospitalización ( )</td>
+            <td>Referido ( )</td>
+            <td style="width: 200px;">_______________________</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Alta ( )</td>
+            <td>Retiro Voluntario ( )</td>
+            <td>Fugado ( )</td>
+            <td style="width: 200px;">_______________________</td>
+        </tr>
+    </table>
+    
+    <p><strong>OBSERVACIONES</strong> _________________________________________________________________</p>
+    <p>______________________________________________________________________________________________________</p>
+
+
+    <!-- Nueva línea sólida para separar la fecha y hora -->
+    <div class="solid-line"></div>
+
+    <!-- Fecha y Hora -->
+    <p><strong>Fecha:</strong> ___/___/_____ <strong>Hora:</strong> _____ : _____</p>
+</body>
+</html>

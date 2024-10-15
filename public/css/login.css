@@ -1,0 +1,110 @@
+body {
+    background: url('../images/fondo2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.container {
+    background-image: url('../images/fondo.jpg'); /* URL de la imagen de fondo */
+    background-size: cover; /* La imagen cubre toda la tarjeta */
+    background-position: center; /* La imagen se centra en la tarjeta */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-color: rgba(179, 178, 178, 0.5); /* Fondo con opacidad */
+    padding: 50px 30px; /* Más espacio interno con mejor proporción */
+    border-radius: 12px; /* Bordes más suavizados */
+    max-width: 650px; /* Ancho máximo ligeramente mayor */
+    margin: 50px auto; /* Centrando y añadiendo margen superior */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra con mayor difuminado */
+    backdrop-filter: blur(3px); /* Efecto de desenfoque para mayor estética */
+}
+
+.logo-img {
+    max-width: 120%; /* Ajuste del tamaño máximo */
+    height: auto;
+    position: relative; /* Puede ser 'absolute' si es necesario */
+    left: 20px; /* movimiento de la imagen según sea necesario */
+    transition: transform 0.3s ease; /* Transición para suavizar los cambios de posición */
+}
+
+/*.logo-img:hover {
+    transform: translateX(10px); Movimiento suave al pasar el mouse 
+}*/
+
+
+.card {
+    background-image: url('path/to/your/image.jpg'); /* URL de la imagen de fondo */
+    background-size: cover; /* La imagen cubre toda la tarjeta */
+    background-position: center; /* La imagen se centra en la tarjeta */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo semitransparente sobre la imagen */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 320px; /* Ancho máximo de la tarjeta */
+    margin: 20px auto; /* Centrando la tarjeta horizontalmente y añadiendo margen vertical */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 10px; /* Relleno interno */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    color: #fff; /* Color de texto blanco para mejor visibilidad */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Sombra de texto para mejor legibilidad */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Movimiento suave al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa al pasar el mouse */
+}
+
+
+/*texto de correo y contra */
+
+.form-label {
+    color: #000000;
+}
+.main-title {
+    font-size: 32px; /* Ajuste del tamaño de la fuente */
+    font-weight: 700; /* Uso de peso de fuente numérico para mayor control */
+    color: #0206f7; /* Color de texto */
+    text-align: center; /* Alineación centrada */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Familia de fuentes */
+    margin-bottom: 25px; /* Aumento del espacio inferior */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    border-bottom: 2px solid #0206f7; /* Línea inferior */
+    padding-bottom: 10px; /* Espaciado inferior para la línea */
+}
+
+
+.input-group-text {
+    background-color: hsl(0, 3%, 80%); /* color para los iconos*/
+    border: none;
+    color: #000000; /* Texto en blanco */
+}
+
+.form-control {
+    background-color: rgba(136, 136, 136, 0.993); /* Fondo blanco semitransparente */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde blanco semitransparente */
+    color: #050505; /* Texto en blanco para contraseña*/
+}
+
+#togglePassword {
+    cursor: pointer;
+}
+
+.invalid-feedback {
+    color: red;
+}
+
+.invalid-feedback strong {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    width: 50%; /* Botón de ancho completo */
+    margin-left: auto;
+}
+
+.text-end a {
+    color: #0c0c0c;
+}
